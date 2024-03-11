@@ -12,17 +12,17 @@ Con el servidor corriendo podemos hacer uso/pruebas del programa de forma local.
 ### URLs de uso local 
 - http://127.0.0.1:8000/AppBuo/
   #### Comida
-  - http://127.0.0.1:8000/AppBuo/nueva_comida/
+  - http://127.0.0.1:8000/AppBuo/nueva_comida/  -> Para agregar comida a la base de datos
   - http://127.0.0.1:8000/AppBuo/buscar_comida/ -> Buscar puppy o proplan o brit
   - Que te llevará a "LocalHost/AppBuo/resultado_comida/?comida=puppy" al hacer la búsqueda
 
   #### Juguetes
-  - http://127.0.0.1:8000/AppBuo/nuevo_juguete/
+  - http://127.0.0.1:8000/AppBuo/nuevo_juguete/  -> Para agregar juguete a la base de datos
   - http://127.0.0.1:8000/AppBuo/buscar_juguete/ -> Buscar pelota o hueso o piscina
   - Que te llevará a "LocalHost/AppBuo/resultado_juguete/?juguete=pelota" al hacer la búsqueda
 
   #### Recetas
-  - http://127.0.0.1:8000/AppBuo/nueva_receta/
+  - http://127.0.0.1:8000/AppBuo/nueva_receta/  -> Para agregar receta a la base de datos
   - http://127.0.0.1:8000/AppBuo/buscar_receta/ -> Buscar helados o calugas o galleta de avena
   - Que te llevará a "LocalHost/AppBuo/resultado_receta/?receta=helados" al hacer la búsqueda
 
