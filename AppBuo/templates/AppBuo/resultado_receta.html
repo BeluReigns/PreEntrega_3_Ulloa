@@ -1,0 +1,9 @@
+<ul>
+{% for receta in resultado2%}
+
+    <li>{{receta.nombre}}{% block title %}: de {% endblock %}
+        {{receta.ingrediente_estrella}}</li>
+
+
+{% endfor %}
+</ul>

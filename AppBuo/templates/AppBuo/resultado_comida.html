@@ -1,0 +1,10 @@
+<ul>
+{% for comida in resultado%}
+
+    <li>{{comida.marca}}</li>
+    <li>{{comida.sabor}}</li>
+    <li>{{comida.peso}}{% block title %} Kgs</li> {% endblock %}
+    <li>{{comida.precio}}</li>    
+
+{% endfor %}
+</ul>

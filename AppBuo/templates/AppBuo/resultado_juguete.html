@@ -1,0 +1,10 @@
+<ul>
+{% for juguete in resultado1%}
+
+    <li>{{juguete.nombre}}{% block title %}:{% endblock %}
+        {{juguete.descripcion}}
+        {{juguete.precio}}
+    </li>
+
+{% endfor %}
+</ul>
