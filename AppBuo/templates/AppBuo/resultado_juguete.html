@@ -1,10 +1,10 @@
 <ul>
 {% for juguete in resultado1%}
 
-    <li>{{juguete.nombre}}{% block title %}:{% endblock %}
-        {{juguete.descripcion}}
-        {{juguete.precio}}
-    </li>
-
+<h3>Comida {{comida.id}} </h3>
+<li>Nombre: {{juguete.nombre}}</li>
+<li>Descripción: {{juguete.descripcion}}.</li>
+<li>Precio: ${{juguete.precio}}.-</li>    
+  
 {% endfor %}
 </ul>

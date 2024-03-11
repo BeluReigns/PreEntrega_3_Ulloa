@@ -1,9 +1,9 @@
 <ul>
 {% for receta in resultado2%}
 
-    <li>{{receta.nombre}}{% block title %}: de {% endblock %}
-        {{receta.ingrediente_estrella}}</li>
-
+    <h3>Receta</h3>
+    <li>Nombre receta: {{receta.nombre}}</li>
+    <li>Ingrediente estrella: {{receta.ingrediente_estrella}}</li>
 
 {% endfor %}
 </ul>
