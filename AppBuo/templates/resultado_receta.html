@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Estos son los resultados de tu búsqueda:
+{% endblock %}
+
+{% block formularios %}
+<ul>
+    {% for receta in resultado2%}
+    
+        <h3>Receta {{receta.id}}</h3>
+        <li>Nombre receta: {{receta.nombre}}</li>
+        <li>Ingrediente estrella: {{receta.ingrediente_estrella}}</li>
+    
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+

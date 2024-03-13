@@ -1,11 +1,19 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Estos son los resultados de tu búsqueda:
+{% endblock %}
+
+{% block formularios %}
 <ul>
 {% for comida in resultado%}
     
     <h3>Comida {{comida.id}} </h3>
     <li>Marca: {{comida.marca}}</li>
     <li>Sabor: {{comida.sabor}}</li>
-    <li>Peso: {{comida.peso}}{% block title %} Kgs</li> {% endblock %}
+    <li>Peso: {{comida.peso}}Kgs</li> 
     <li>Precio: ${{comida.precio}}.-</li>    
 
 {% endfor %}
 </ul>
+{% endblock %}

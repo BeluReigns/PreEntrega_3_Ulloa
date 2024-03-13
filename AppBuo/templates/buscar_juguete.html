@@ -1,3 +1,10 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Buscar  el juguete que quieras para tu perrun@
+{% endblock %}
+
+{% block formularios %}
 <form action="/AppBuo/resultado_juguete" method="GET">
 
     Ingrese el juguete a buscar: <input type="text" name="juguete">
@@ -5,3 +12,6 @@
     <input type="submit" value="buscar">
 
 </form>
+{% endblock %}
+
+

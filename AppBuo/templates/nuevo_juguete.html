@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Agregar Juguete
+{% endblock %}
+
+
+{% block formularios %}
+<form action="" method="post"> {% csrf_token %}
+
+    {{form}}
+
+    <input type="submit" value="Guardar">
+
+
+</form>
+{% endblock %}
+

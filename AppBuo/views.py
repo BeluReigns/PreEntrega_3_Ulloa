@@ -4,6 +4,10 @@ from .forms import ComidaFormulario, JugueteFormulario, RecetaFormulario
 
 # Create your views here.
 
+def inicio(request):
+
+    return render(request, "inicio.html")
+
 # Vistas para formularios
 def agregar_comida(request):
     
@@ -14,9 +18,7 @@ def agregar_comida(request):
         formulario = ComidaFormulario(request.POST) 
 
         if formulario.is_valid():
-
-            info_dict = formulario.cleaned_data
-            
+            info_dict = formulario.cleaned_data            
             nueva_comida = Comida(marca = info_dict["marca"],
                                   sabor = info_dict["sabor"],
                                   peso = info_dict["peso"],
@@ -24,13 +26,13 @@ def agregar_comida(request):
             
             nueva_comida.save()
 
-            return render(request, "AppBuo/inicio.html")
+            return render(request, "inicio.html")
         
     else:
 
         formulario = ComidaFormulario()
         
-    return render(request, "AppBuo/nueva_comida.html", {"form":formulario})
+    return render(request, "nueva_comida.html", {"form":formulario})
 
 
 def agregar_juguete(request):
@@ -49,13 +51,13 @@ def agregar_juguete(request):
             
             nuevo_juguete.save()
 
-            return render(request, "AppBuo/inicio.html")
+            return render(request, "inicio.html")
         
     else:
 
         formulario = JugueteFormulario()
         
-    return render(request, "AppBuo/nuevo_juguete.html", {"form":formulario})
+    return render(request, "nuevo_juguete.html", {"form":formulario})
 
 
 def agregar_receta(request):
@@ -73,13 +75,13 @@ def agregar_receta(request):
             
             nueva_receta.save()
         
-            return render(request, "AppBuo/inicio.html")
+            return render(request, "inicio.html")
 
     else:
 
         formulario = RecetaFormulario()
         
-    return render(request, "AppBuo/nueva_receta.html", {"form":formulario})
+    return render(request, "nueva_receta.html", {"form":formulario})
 
 
 # Buscar y mostrar resultados de la búsqueda
@@ -87,15 +89,15 @@ def agregar_receta(request):
 # Vista para mostrar el formulario de búsqueda
 def buscar_comida(request):
     
-    return render(request, "AppBuo/buscar_comida.html")
+    return render(request, "buscar_comida.html")
 
 def buscar_juguete(request):
     
-    return render(request, "AppBuo/buscar_juguete.html")
+    return render(request, "buscar_juguete.html")
 
 def buscar_receta(request):
     
-    return render(request, "AppBuo/buscar_receta.html")
+    return render(request, "buscar_receta.html")
 
 # Vista para mostrar los resultados de la búsqueda
 def resultado_comida(request):
@@ -104,7 +106,7 @@ def resultado_comida(request):
     
     resultados = Comida.objects.filter(marca__iexact=comida)    
 
-    return render(request, "AppBuo/resultado_comida.html", {"resultado":resultados})
+    return render(request, "resultado_comida.html", {"resultado":resultados})
 
 def resultado_juguete(request):
 
@@ -112,7 +114,7 @@ def resultado_juguete(request):
     
     resultados = Juguetes.objects.filter(nombre__iexact=juguete)    
 
-    return render(request, "AppBuo/resultado_juguete.html", {"resultado1":resultados})
+    return render(request, "resultado_juguete.html", {"resultado1":resultados})
 
 def resultado_receta(request):
 
@@ -120,6 +122,13 @@ def resultado_receta(request):
     
     resultados = Recetas.objects.filter(nombre__iexact=receta)    
 
-    return render(request, "AppBuo/resultado_receta.html", {"resultado2":resultados})
+    return render(request, "resultado_receta.html", {"resultado2":resultados})
 
+def ver_comidas(request):
+    return render(request, "ver_comidas.html")
 
+def ver_juguetes(request):
+    return render(request, "ver_juguetes.html")
+
+def ver_recetas(request):
+    return render(request, "ver_recetas.html")

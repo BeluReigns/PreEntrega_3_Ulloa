@@ -1,3 +1,10 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Busca la comida que quieras para tu perrun@
+{% endblock %}
+
+{% block formularios %}
 <form action="/AppBuo/resultado_comida" method="GET">
 
     Ingrese el nombre de la comida a buscar: <input type="text" name="comida">
@@ -5,3 +12,4 @@
     <input type="submit" value="buscar">
 
 </form>
+{% endblock %}
